@@ -102,39 +102,3 @@ footer {
   transform: translateY(20px);
   transition: all 0.5s ease;
 }
-
-.news article.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-.hero {
-  background: linear-gradient(to right, #00a86b, #4ad7b9);
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-.hero h2 {
-  font-size: 2em;
-}
-
-.hero p {
-  margin-top: 10px;
-  font-size: 1.2em;
-}
-.btn {
-  display: inline-block;
-  background: #00a86b;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: transform 0.2s ease, background 0.3s;
-}
-
-.btn:hover {
-  background: #00945f;
-  transform: scale(1.05);
-}
