@@ -1,123 +1,83 @@
 
-body {
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f2f2;
-  color: #222;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
 }
 
+body {
+  background: radial-gradient(circle at top, #121212, #000);
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === HEADER === */
 header {
-  background: #1f1f1f;
-  color: white;
-  padding: 15px;
-  text-align: center;
+  background: rgba(15, 15, 15, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-bottom: 2px solid #00ff7f;
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  color: #00ff7f;
+  font-size: 1.6em;
+  text-shadow: 0 0 10px #00ff7f;
 }
 
 nav a {
-  color: #ddd;
-  margin: 0 10px;
+  color: #ccc;
   text-decoration: none;
-  font-weight: 500;
+  margin-left: 20px;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
-nav a.active, nav a:hover {
+nav a:hover {
   color: #00ff7f;
+  text-shadow: 0 0 10px #00ff7f;
 }
 
-.hero {
-  background: linear-gradient(to bottom right, #00a86b, #4ad7b9);
-  color: white;
-  padding: 60px 20px;
+/* === MAIN CONTENT === */
+main, .news {
+  flex: 1;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
   text-align: center;
 }
 
-.info {
-  text-align: center;
-  padding: 30px;
-}
-
-main {
-  padding: 20px;
-  text-align: center;
-}
-
-.news article {
-  background: white;
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ddd;
-}
-
-#player-list {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-
-#player-list li {
-  background: white;
-  margin: 10px auto;
-  padding: 10px;
-  width: 200px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px #ccc;
-}
-
-.btn {
-  display: inline-block;
-  background: #00a86b;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1; 
-}
-
-footer {
-  margin-top: auto;
-}
-
-@media (max-width: 600px){}
-  nav a {
-    display: block;
-    margin: 8px 0;
-  }
-
-
-.news h2 {
-  text-align: center;
+main h2, .news h2 {
+  font-size: 2em;
   color: #00ffcc;
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px #00ffcc;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #00ffcc;
 }
 
+/* === NEWS ITEMS === */
 .news-item {
-  background-color: #1e1e1e;
-  color: #fff;
+  background: #1b1b1b;
+  border: 1px solid rgba(0,255,127,0.2);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 255, 150, 0.2);
+  box-shadow: 0 0 15px rgba(0,255,127,0.1);
+  margin-bottom: 20px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .news-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(0, 255, 150, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(0,255,127,0.4);
 }
 
 .news-item h3 {
@@ -127,13 +87,28 @@ footer {
 
 .news-item p {
   line-height: 1.5;
-  font-size: 1em;
+  color: #ddd;
 }
 
-.news-item .date {
+.date {
   display: block;
   margin-top: 10px;
-  font-size: 0.9em;
   color: #aaa;
+  font-size: 0.9em;
   text-align: right;
+}
+
+/* === FOOTER === */
+footer {
+  background: #0a0a0a;
+  text-align: center;
+  padding: 15px;
+  color: #999;
+  font-size: 0.9em;
+  border-top: 1px solid #00ff7f;
+  margin-top: auto;
+}
+
+footer p {
+  color: #00ff7f;
 }
