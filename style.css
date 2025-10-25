@@ -169,3 +169,39 @@ header {
   top: 0;
   z-index: 1000;
 }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+}
+
+header {
+  background-color: #111;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid #00ff7f;
+}
+
+header h1 {
+  font-size: 1.8em;
+  color: #00ff7f;
+  margin: 0;
+}
+
+nav {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+    background-color: #00ff7f20;
+}
