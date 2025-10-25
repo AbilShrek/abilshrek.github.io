@@ -16,6 +16,7 @@ body {
   background-color: #0d0d0d;
   color: #fff;
   line-height: 1.6;
+  text-align: center;
 }
 
 /* === ШАПКА === */
@@ -44,8 +45,8 @@ nav a {
   color: #fff;
   text-decoration: none;
   background-color: #00ff7f20;
-  padding: 8px 15px;
-  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 12px;
   transition: 0.3s;
   font-size: 1em;
 }
@@ -56,43 +57,71 @@ nav a.active {
   color: #111;
 }
 
-/* === ГЛАВНАЯ (ПО СЕРЕДИНЕ) === */
-main.home {
+/* === ОСНОВНОЙ КОНТЕНТ === */
+main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center; /* по центру по горизонтали */
-  justify-content: center; /* по центру по вертикали */
+  justify-content: center;  /* по вертикали по центру */
+  align-items: center;      /* по горизонтали по центру */
   padding: 40px 20px;
-  text-align: center;
   max-width: 900px;
   margin: 0 auto;
   background-color: #1a1a1a;
   border-left: 5px solid #00ff7f;
+  border-right: 5px solid #00ff7f;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 255, 127, 0.15);
+  box-shadow: 0 0 25px rgba(0, 255, 127, 0.15);
 }
 
-main.home h2 {
-  font-size: 1.8em;
+/* === ЗАГОЛОВКИ === */
+h2, h3 {
+  color: #00ff7f;
   margin-bottom: 10px;
 }
 
-.highlight {
-  color: #00ff7f;
-}
-
-main.home p {
+/* === ТЕКСТ === */
+p {
   color: #ccc;
   margin-bottom: 25px;
+  font-size: 1.1em;
+  max-width: 700px;
+}
+
+/* === НОВОСТИ === */
+.news-item {
+  background-color: #1a1a1a;
+  border: 2px solid #00ff7f;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 0 0 20px rgba(0, 255, 127, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.news-item h3 {
+  color: #00ff7f;
+  margin-bottom: 10px;
+}
+
+.news-item p {
+  color: #ddd;
+}
+
+.news-item .date {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #aaa;
 }
 
 /* === КНОПКИ === */
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 .btn {
@@ -121,60 +150,6 @@ main.home p {
   color: #111;
 }
 
-/* === ОСОБЕННОСТИ === */
-.features {
-  margin-top: 40px;
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 255, 127, 0.1);
-}
-
-.features h3 {
-  color: #00ff7f;
-  margin-bottom: 15px;
-}
-
-.features ul {
-  list-style: none;
-}
-
-.features li {
-  padding: 8px 0;
-  border-bottom: 1px solid #222;
-}
-
-/* === НОВОСТИ === */
-main.news {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 30px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.news-item {
-  background-color: #1a1a1a;
-  border-left: 5px solid #00ff7f;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 255, 127, 0.1);
-}
-
-.news-item h3 {
-  color: #00ff7f;
-  margin-bottom: 10px;
-}
-
-.news-item .date {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #aaa;
-}
-
 /* === ФУТЕР === */
 footer {
   text-align: center;
@@ -186,36 +161,23 @@ footer {
   margin-top: auto;
 }
 
-/* === АДАПТИВ ДЛЯ ТЕЛЕФОНОВ === */
+/* === АДАПТИВ (ТЕЛЕФОН) === */
 @media (max-width: 600px) {
   header h1 {
     font-size: 1.5em;
   }
 
   nav a {
-    padding: 6px 10px;
+    padding: 8px 12px;
     font-size: 0.9em;
   }
 
-  main.home {
+  main {
     padding: 25px 10px;
   }
 
-  .buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  main.news {
-    padding: 15px;
-  }
-
   .news-item {
-    padding: 12px;
+    padding: 15px;
   }
 
   footer {
