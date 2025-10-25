@@ -1,13 +1,25 @@
 
-/* === Общий стиль === */
-body {
+/* === БАЗОВЫЙ СТИЛЬ === */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
   font-family: 'Poppins', sans-serif;
   background-color: #0d0d0d;
   color: #fff;
+  line-height: 1.6;
 }
 
-/* === Шапка === */
+/* === ШАПКА === */
 header {
   background-color: #111;
   padding: 20px;
@@ -17,16 +29,16 @@ header {
 
 header h1 {
   color: #00ff7f;
-  margin: 0 0 10px;
+  margin-bottom: 12px;
   font-size: 1.8em;
 }
 
-/* === Навигация === */
+/* === НАВИГАЦИЯ === */
 nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 nav a {
@@ -45,14 +57,94 @@ nav a.active {
   color: #111;
 }
 
-/* === Новости === */
+/* === ГЛАВНАЯ === */
+main.home {
+  flex: 1;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+main.home h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #00ff7f;
+}
+
+main.home p {
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #00ff7f;
+  color: #111;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #00cc66;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #00ff7f;
+  color: #00ff7f;
+}
+
+.btn-outline:hover {
+  background-color: #00ff7f;
+  color: #111;
+}
+
+/* === ОСОБЕННОСТИ === */
+.features {
+  margin-top: 40px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 255, 127, 0.1);
+}
+
+.features h3 {
+  color: #00ff7f;
+  margin-bottom: 15px;
+}
+
+.features ul {
+  list-style: none;
+}
+
+.features li {
+  padding: 8px 0;
+  border-bottom: 1px solid #222;
+}
+
+/* === НОВОСТИ === */
 main.news {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
+  padding: 30px 20px;
   max-width: 800px;
-  margin: 30px auto;
+  margin: 0 auto;
 }
 
 .news-item {
@@ -60,7 +152,7 @@ main.news {
   border-left: 5px solid #00ff7f;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,255,127,0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 127, 0.1);
 }
 
 .news-item h3 {
@@ -75,21 +167,21 @@ main.news {
   color: #aaa;
 }
 
-/* === Футер === */
+/* === ФУТЕР === */
 footer {
   text-align: center;
   padding: 20px;
   background-color: #111;
   color: #999;
   font-size: 0.9em;
-  margin-top: 40px;
   border-top: 2px solid #00ff7f;
+  margin-top: auto;
 }
 
-/* === 📱 Адаптив === */
+/* === АДАПТИВ ДЛЯ ТЕЛЕФОНОВ === */
 @media (max-width: 600px) {
   header h1 {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 
   nav a {
@@ -97,8 +189,21 @@ footer {
     font-size: 0.9em;
   }
 
+  main.home {
+    padding: 25px 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
   main.news {
-    padding: 10px;
+    padding: 15px;
   }
 
   .news-item {
@@ -108,24 +213,4 @@ footer {
   footer {
     font-size: 0.8em;
   }
-}
-/* === Фикс футера внизу === */
-html, body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  color: #999;
-  font-size: 0.9em;
-  border-top: 2px solid #00ff7f;
-  margin-top: auto; /* 🚀 заставляет футер быть внизу */
 }
