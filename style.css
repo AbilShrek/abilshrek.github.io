@@ -1,0 +1,140 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+header {
+  background: #1f1f1f;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: #ddd;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active, nav a:hover {
+  color: #00ff7f;
+}
+
+.hero {
+  background: linear-gradient(to bottom right, #00a86b, #4ad7b9);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+  padding: 30px;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+.news article {
+  background: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+#player-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#player-list li {
+  background: white;
+  margin: 10px auto;
+  padding: 10px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.btn {
+  display: inline-block;
+  background: #00a86b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; 
+}
+
+footer {
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
+.news article {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.news article.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero {
+  background: linear-gradient(to right, #00a86b, #4ad7b9);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.hero h2 {
+  font-size: 2em;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+.btn {
+  display: inline-block;
+  background: #00a86b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.btn:hover {
+  background: #00945f;
+  transform: scale(1.05);
+}
