@@ -216,3 +216,13 @@ footer {
     width: 90%;
   }
 }
+.sold {
+  color: #ff5555;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  background: rgba(255, 85, 85, 0.1);
+  border: 1px solid #ff5555;
+  border-radius: 8px;
+  padding: 5px;
+}
